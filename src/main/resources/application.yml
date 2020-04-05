@@ -1,0 +1,13 @@
+spring:
+  profiles:
+    active: dev
+  thymeleaf:
+    mode: HTML
+    encoding: UTF-8
+    cache: false
+    enabled: true
+    prefix: classpath:/templates/
+    suffix: .html
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*Mapper.xml
+  type-aliases-package: cn.zjiali.blog.entity
