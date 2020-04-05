@@ -1,4 +1,6 @@
 spring:
+  resources:
+    static-locations: classpath:/static/
   profiles:
     active: dev
   thymeleaf:
@@ -8,6 +10,3 @@ spring:
     enabled: true
     prefix: classpath:/templates/
     suffix: .html
-mybatis-plus:
-  mapper-locations: classpath*:mapper/*Mapper.xml
-  type-aliases-package: cn.zjiali.blog.entity

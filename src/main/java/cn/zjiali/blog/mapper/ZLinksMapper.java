@@ -1,7 +1,6 @@
 package cn.zjiali.blog.mapper;
 
 import cn.zjiali.blog.entity.ZLinks;
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
  * <p>
@@ -11,6 +10,6 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @author zJiaLi
  * @since 2020-04-04
  */
-public interface ZLinksMapper extends BaseMapper<ZLinks> {
+public interface ZLinksMapper  {
 
 }
