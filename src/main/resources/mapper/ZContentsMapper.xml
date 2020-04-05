@@ -4,15 +4,48 @@
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="cn.zjiali.blog.entity.ZContents">
-    <result column="id" property="id" />
-        <result column="title" property="title" />
-        <result column="content" property="content" />
-        <result column="order" property="order" />
-        <result column="author" property="author" />
-        <result column="summary" property="summary" />
-        <result column="tag_ids" property="tagIds" />
-        <result column="update_time" property="updateTime" />
-        <result column="create_time" property="createTime" />
+        <result column="id" property="id"/>
+        <result column="title" property="title"/>
+        <result column="content" property="content"/>
+        <result column="order" property="order"/>
+        <result column="author" property="author"/>
+        <result column="summary" property="summary"/>
+        <result column="tag_ids" property="tagIds"/>
+        <result column="update_time" property="updateTime"/>
+        <result column="create_time" property="createTime"/>
     </resultMap>
 
+    <select id="list" resultType="cn.zjiali.blog.entity.ZContents">
+        SELECT
+        a.*
+        FROM
+        (
+        SELECT
+        id,
+        title,
+        author,
+        summary,
+        tags,
+        date_format( create_time, '%Y-%m-%d' ) AS createTimeStr,
+        create_time
+        <where>
+            <if test="tag!=null and tag != ''">
+                tag_ids like concat('%',#{tag},'%')
+            </if>
+        </where>
+        FROM
+        z_contents
+        ORDER BY
+        `order`
+        <if test="page!=null and pageSize!=null">
+            LIMIT #{page,javaType=int,jdbcType=NUMERIC},
+            #{pageSize,javaType=int,jdbcType=NUMERIC}
+        </if>
+        ) AS a
+        ORDER BY
+        a.create_time
+    </select>
+    <select id="count" resultType="java.lang.Integer">
+		select count(1) FROM z_contents
+	</select>
 </mapper>

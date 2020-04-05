@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>
+        钟某人
+    </title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/blog.css}">
+    <script type="text/javascript" th:src="@{/js/jquery-3.4.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">黑</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+
+                <li>
+                    <a href="/about/">关于我</a>
+                </li>
+
+                <li>
+                    <a href="/archive/">列表</a>
+                </li>
+
+                <li>
+                    <a href="/blog/tags">标签</a>
+                </li>
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+<!-- Page Header -->
+<header class="intro-header" style="background-color:#333">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>列表</h1>
+                    <hr class="small">
+                    <span class="subheading">现在很少，以后很多</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <ul class="listing">
+
+                <h2 id="section">2019</h2>
+                <li class="listing-item">
+                    <time datetime="2019-10-16">2019-10-16</time>
+                    <a href="/blog/2019/10/16/react-zpl/" title="React自定义渲染:将react代码转换为zpl">React自定义渲染:将react代码转换为zpl</a>
+                </li>
+
+                <li class="listing-item">
+                    <time datetime="2019-05-14">2019-05-14</time>
+                    <a href="/blog/2019/05/14/web-security-xss/" title="WEB安全指北：XSS攻击">WEB安全指北：XSS攻击</a>
+                </li>
+
+
+                <li class="listing-item">
+                    <time datetime="2019-05-10">2019-05-10</time>
+                    <a href="/blog/2019/05/10/promise/" title="An Implementation based on Promises/A+">An Implementation based on Promises/A+</a>
+                </li>
+
+
+
+
+                <h2 id="section">2018</h2>
+
+                <li class="listing-item">
+                    <time datetime="2018-03-29">2018-03-29</time>
+                    <a href="/blog/2018/03/29/nginx/" title="由部署一个前端页面谈起">由部署一个前端页面谈起</a>
+                </li>
+
+
+
+                <li class="listing-item">
+                    <time datetime="2018-03-08">2018-03-08</time>
+                    <a href="/blog/2018/03/08/es6-feature/" title="es6笔记">es6笔记</a>
+                </li>
+
+
+
+
+                <h2 id="section">2017</h2>
+
+                <li class="listing-item">
+                    <time datetime="2017-12-19">2017-12-19</time>
+                    <a href="/blog/2017/12/19/lua-learning-note-2/" title="lua学习笔记（二）:常用类库">lua学习笔记（二）:常用类库</a>
+                </li>
+
+
+
+                <li class="listing-item">
+                    <time datetime="2017-12-14">2017-12-14</time>
+                    <a href="/blog/2017/12/14/reding-notes/" title="读书笔记整理（一）">读书笔记整理（一）</a>
+                </li>
+
+
+
+                <li class="listing-item">
+                    <time datetime="2017-02-19">2017-02-19</time>
+                    <a href="/blog/2017/02/19/lua-learning-note-1/" title="lua学习笔记（一）:根据user-agent展示不同网页">lua学习笔记（一）:根据user-agent展示不同网页</a>
+                </li>
+
+
+
+
+                <h2 id="section">2016</h2>
+
+                <li class="listing-item">
+                    <time datetime="2016-09-12">2016-09-12</time>
+                    <a href="/blog/2016/09/12/linux-server-environment-establish/" title="linux环境搭建的一些记录">linux环境搭建的一些记录</a>
+                </li>
+
+
+
+                <li class="listing-item">
+                    <time datetime="2016-07-10">2016-07-10</time>
+                    <a href="/blog/2016/07/10/digital-ocean-vps-establish/" title="自己搭建服务器造梯子的小记">自己搭建服务器造梯子的小记</a>
+                </li>
+
+
+
+                <li class="listing-item">
+                    <time datetime="2016-04-28">2016-04-28</time>
+                    <a href="/blog/2016/04/28/crawlers-data-deduplication/" title="爬虫数据去重小记">爬虫数据去重小记</a>
+                </li>
+
+
+
+                <li class="listing-item">
+                    <time datetime="2016-02-28">2016-02-28</time>
+                    <a href="/blog/2016/02/28/datatable-learning-note-1/" title="Datatables学习小记">Datatables学习小记</a>
+                </li>
+
+
+
+                <li class="listing-item">
+                    <time datetime="2016-01-30">2016-01-30</time>
+                    <a href="/blog/2016/01/30/jsoup-learning-note-4/" title="jsoup学习笔记(四):监控动态与爬取所有动态">jsoup学习笔记(四):监控动态与爬取所有动态</a>
+                </li>
+
+
+
+                <li class="listing-item">
+                    <time datetime="2016-01-23">2016-01-23</time>
+                    <a href="/blog/2016/01/23/jsoup-learning-note-3/" title="jsoup学习笔记(三):模拟登录">jsoup学习笔记(三):模拟登录</a>
+                </li>
+
+
+
+                <li class="listing-item">
+                    <time datetime="2016-01-19">2016-01-19</time>
+                    <a href="/blog/2016/01/19/jsoup-learning-note-2/" title="jsoup学习笔记(二):读取知乎个人首页动态">jsoup学习笔记(二):读取知乎个人首页动态</a>
+                </li>
+
+
+
+                <li class="listing-item">
+                    <time datetime="2016-01-14">2016-01-14</time>
+                    <a href="/blog/2016/01/14/jsoup-learning-note-1/" title="jsoup学习笔记(一):一个简单的html处理工具">jsoup学习笔记(一):一个简单的html处理工具</a>
+                </li>
+
+
+
+                <li class="listing-item">
+                    <time datetime="2016-01-03">2016-01-03</time>
+                    <a href="/blog/2016/01/03/init-blog/" title="博客搬迁">博客搬迁</a>
+                </li>
+
+
+
+
+                <h2 id="section">2015</h2>
+
+                <li class="listing-item">
+                    <time datetime="2015-09-09">2015-09-09</time>
+                    <a href="/blog/2015/09/09/use-java-for-game-script/" title="使用java写个简单游戏脚本（二）：JNI">使用java写个简单游戏脚本（二）：JNI</a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</div>
+<hr>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                </ul>
+                <p class="copyright text-muted">
+                    © 2020  cabeza ❖ Powered by Jekyll.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body></html>

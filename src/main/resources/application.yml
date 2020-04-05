@@ -10,3 +10,9 @@ spring:
     enabled: true
     prefix: classpath:/templates/
     suffix: .html
+mybatis:
+  mapper-locations: classpath*:mapper/*Mapper.xml
+  type-aliases-package: cn.zjiali.blog.entity
+logging:
+  level:
+    cn.zjiali.blog.mapper: debug

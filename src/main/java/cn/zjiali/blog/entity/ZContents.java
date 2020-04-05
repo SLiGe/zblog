@@ -36,10 +36,14 @@ public class ZContents implements Serializable {
     /**
      * 标签集合
      */
-    private String tagIds;
+    private String tags;
 
     private LocalDateTime updateTime;
     private LocalDateTime createTime;
 
     private String createTimeStr;
+
+    private int page;
+
+    private int pageSize;
 }

@@ -1,10 +1,307 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>
+        钟某人
+    </title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/blog.css}">
+    <script type="text/javascript" th:src="@{/js/jquery-3.4.1.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/bootstrap.min.js}"></script>
 </head>
 <body>
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">钟</a>
+        </div>
 
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+
+                <li>
+                    <a href="/about/">关于我</a>
+                </li>
+
+                <li>
+                    <a href="/archive/">列表</a>
+                </li>
+
+                <li>
+                    <a href="/blog/tags">标签</a>
+                </li>
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<header class="intro-header" style="background-color:#333">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>黑</h1>
+                    <hr class="small">
+                    <span class="subheading">Nai tiruvantel ar varyuvantel i Valar tielyanna nu vilya.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+            <div class="post-preview">
+                <a href="/blog/2019/10/16/react-zpl/">
+                    <h2 class="post-title">
+                        React自定义渲染:将react代码转换为zpl
+                    </h2>
+
+                    <div class="post-content-preview">
+
+
+                        内容简介
+
+
+                        当前业务中，存在许多需要打印的场景，为提升打印体验，开发了一套可以将 React 代码转换为打印机描述语言 ZPL 的类库：React ZPL。
+
+                        本文将从需求背景出发，介绍 ZPL 的概念和 React 渲染过程，以及 React ZPL 是如何通过 React 的...
+                    </div>
+                </a>
+                <p class="post-meta">Posted by cabeza on October 16, 2019</p>
+            </div>
+
+            <hr>
+
+            <div class="post-preview">
+                <a href="/blog/2019/05/14/web-security-xss/">
+                    <h2 class="post-title">
+                        WEB安全指北：XSS攻击
+                    </h2>
+
+                    <div class="post-content-preview">
+                        今日说法：XSS 攻击案例（一）
+
+                        以下案例纯属虚构：
+
+                        黑客发现旧浪网某边缘功能的评论区存在漏洞，用户输入的内容未经过滤直接保存到后台
+
+                        攻击者构建一个评论, 包含恶意内容
+
+                        你的牌打得太好辣！&lt;script src="//hacker.com/evil.js"&gt;&lt;/scr...
+                    </div>
+                </a>
+                <p class="post-meta">Posted by cabeza on May 14, 2019</p>
+            </div>
+
+            <hr>
+
+            <div class="post-preview">
+                <a href="/blog/2019/05/10/promise/">
+                    <h2 class="post-title">
+                        An Implementation based on Promises/A+
+                    </h2>
+
+                    <div class="post-content-preview">
+                        Promises/A+规范
+
+                        class Promise {
+                        state = "pending"; // pending,fulfilled,rejected
+                        value = undefined;
+                        callbackStack = [];
+                        constructor(fn) {
+                        ...
+                    </div>
+                </a>
+                <p class="post-meta">Posted by cabeza on May 10, 2019</p>
+            </div>
+
+            <hr>
+
+            <div class="post-preview">
+                <a href="/blog/2018/03/29/nginx/">
+                    <h2 class="post-title">
+                        由部署一个前端页面谈起
+                    </h2>
+
+                    <div class="post-content-preview">
+
+                        小组分享整理，nginx入门
+
+
+                        nginx做了什么？
+
+                        从开发一个简单的前端页面开始
+
+                        &lt;html&gt;
+                        &lt;head&gt;
+                        &lt;title&gt;beauty&lt;/title&gt;
+                        &lt;/he...
+                    </div>
+                </a>
+                <p class="post-meta">Posted by cabeza on March 29, 2018</p>
+            </div>
+
+            <hr>
+
+            <div class="post-preview">
+                <a href="/blog/2018/03/08/es6-feature/">
+                    <h2 class="post-title">
+                        es6笔记
+                    </h2>
+
+                    <div class="post-content-preview">
+
+                        3月8日在小组分享es6的笔记
+
+
+                        let、const
+
+                        let声明的变量只在它所在的代码块有效。
+                        var a = [];
+                        for (var i = 0; i &lt; 10; i++) {
+                        a[i] = function () {
+                        console.log(i);
+                        };
+                        ...
+                    </div>
+                </a>
+                <p class="post-meta">Posted by cabeza on March 8, 2018</p>
+            </div>
+
+            <hr>
+
+            <div class="post-preview">
+                <a href="/blog/2017/12/19/lua-learning-note-2/">
+                    <h2 class="post-title">
+                        lua学习笔记（二）:常用类库
+                    </h2>
+
+                    <div class="post-content-preview">
+
+                        很久没有玩lua了，和上次的小打小闹不同，这次要写一个更复杂的部署到真实环境的lua脚本
+
+
+                        背景
+
+                        最近遇到一个需求，用户扫描我们提供的二维码，如果是已经绑定过的用户，那么直接跳转到目标页面target.html，
+                        如果用户为注册，那么需要根据携带的信息，为他绑定，然后跳转到targe...
+                    </div>
+                </a>
+                <p class="post-meta">Posted by cabeza on December 19, 2017</p>
+            </div>
+
+            <hr>
+
+            <div class="post-preview">
+                <a href="/blog/2017/12/14/reding-notes/">
+                    <h2 class="post-title">
+                        读书笔记整理（一）
+                    </h2>
+
+                    <div class="post-content-preview">
+                        极简欧洲史
+
+
+                        他所雕刻的大卫像是公认的完美人类形貌；人类是尊贵、高尚和美的化身——一如哈姆雷特所形容：“行动多么像天使！悟性多么像神明！”
+
+
+                        摘自第五章“有国王的民主，没国王的极权”。作者引用莎士比亚《哈姆雷特》中的台词，表达对米开朗基罗的赞美，但是哈姆雷特在是说完这句话后，紧接着就是...
+                    </div>
+                </a>
+                <p class="post-meta">Posted by cabeza on December 14, 2017</p>
+            </div>
+
+            <hr>
+
+            <div class="post-preview">
+                <a href="/blog/2017/02/19/lua-learning-note-1/">
+                    <h2 class="post-title">
+                        lua学习笔记（一）:根据user-agent展示不同网页
+                    </h2>
+
+                    <div class="post-content-preview">
+
+                        同一个url，https://www.baidu.com/，在电脑上打开，展示pc页面，在手机上打开，则显示移动端页面，对此很是好奇,
+                        如何才能实现这功能呢？
+
+
+                        js去控制？
+
+                        遇到这个问题，首先想到的思路是根据浏览器内的user-agent属性去区分pc端和移动端，继而很自然的想到，...
+                    </div>
+                </a>
+                <p class="post-meta">Posted by cabeza on February 19, 2017</p>
+            </div>
+
+            <hr>
+
+
+            <!-- Pager -->
+
+            <ul class="pager">
+
+
+                <li class="next">
+                    <a href="/page2">Older Posts →</a>
+                </li>
+
+            </ul>
+
+
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    <!-- kill the Facebook and Weibo -->
+
+
+
+
+
+                    <!--
+
+                    -->
+
+                    <!--
+
+                    -->
+
+
+                    <!--
+
+                    -->
+
+                </ul>
+                <p class="copyright text-muted">
+                    © 2020  cabeza ❖ Powered by Jekyll.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

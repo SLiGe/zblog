@@ -4,12 +4,13 @@ import cn.zjiali.blog.entity.ZContents;
 import cn.zjiali.blog.mapper.ZContentsMapper;
 import cn.zjiali.blog.service.IZContentsService;
 import cn.zjiali.blog.util.CommonUtil;
-import com.baomidou.mybatisplus.core.toolkit.Wrappers;
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.ui.ModelMap;
+import org.springframework.ui.ConcurrentModel;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -20,23 +21,41 @@ import java.util.List;
  * @since 2020-04-04
  */
 @Service
-public class ZContentsServiceImpl extends ServiceImpl<ZContentsMapper, ZContents> implements IZContentsService {
+public class ZContentsServiceImpl implements IZContentsService {
+
+    private final ZContentsMapper zContentsMapper;
+
+    @Autowired
+    public ZContentsServiceImpl(ZContentsMapper zContentsMapper) {
+        this.zContentsMapper = zContentsMapper;
+    }
+
 
     @Override
-    public void getIndex(ModelMap modelMap) {
-        List<ZContents> list = list(Wrappers.<ZContents>lambdaQuery().orderByDesc(ZContents::getCreateTime).last(" limit 8"));
+    public void getIndex(ConcurrentModel modelMap) {
+        List<ZContents> list = zContentsMapper.list(1, 8, null);
         modelMap.addAttribute("list", list);
-        int count = count();
+        int count = zContentsMapper.count();
         modelMap.addAttribute("dataCount", count);
     }
 
     @Override
-    public void page(ModelMap modelMap, int num) {
+    public void page(ConcurrentModel modelMap, int num) {
         int pageParam = CommonUtil.getPageParam(num, 8);
-        String limitSql = " limit " + pageParam + ",8 ";
-        List<ZContents> list = list(Wrappers.<ZContents>lambdaQuery().orderByDesc(ZContents::getCreateTime).last(limitSql));
+        List<ZContents> list = zContentsMapper.list(pageParam, 8, null);
         modelMap.addAttribute("list", list);
-        int count = count();
+        int count = zContentsMapper.count();
         modelMap.addAttribute("dataCount", count);
+    }
+
+    @Override
+    public void timeList(ConcurrentModel modelMap) {
+        List<String> years = zContentsMapper.selectYears();
+        Map<String, Object> dataMap = new HashMap<>();
+        years.forEach(year -> {
+            List<ZContents> list = zContentsMapper.getTimeList(year);
+            dataMap.put(year, list);
+        });
+        modelMap.addAttribute("dataMap", dataMap);
     }
 }

@@ -1,6 +1,9 @@
 package cn.zjiali.blog.mapper;
 
 import cn.zjiali.blog.entity.ZTag;
+import org.apache.ibatis.annotations.Select;
+
+import java.util.List;
 
 /**
  * <p>
@@ -12,4 +15,6 @@ import cn.zjiali.blog.entity.ZTag;
  */
 public interface ZTagMapper {
 
+    @Select("select id,tag_name,tag_value from z_tag")
+    List<ZTag> list();
 }

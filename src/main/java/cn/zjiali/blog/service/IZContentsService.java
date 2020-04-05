@@ -1,7 +1,7 @@
 package cn.zjiali.blog.service;
 
 import cn.zjiali.blog.entity.ZContents;
-import com.baomidou.mybatisplus.extension.service.IService;
+import org.springframework.ui.ConcurrentModel;
 import org.springframework.ui.ModelMap;
 
 /**
@@ -12,12 +12,15 @@ import org.springframework.ui.ModelMap;
  * @author zJiaLi
  * @since 2020-04-04
  */
-public interface IZContentsService extends IService<ZContents> {
+public interface IZContentsService  {
 
     /**
      * 主页渲染
      */
-    void getIndex(ModelMap modelMap);
+    void getIndex(ConcurrentModel modelMap);
 
-    void page(ModelMap modelMap, int num);
+    void page(ConcurrentModel modelMap, int num);
+
+    void timeList(ConcurrentModel modelMap);
+
 }
